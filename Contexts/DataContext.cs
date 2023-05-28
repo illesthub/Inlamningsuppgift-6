@@ -118,6 +118,7 @@ namespace Inlamningsuppgift_6.Contexts
                 new ProductCategoryEntity { ProductId = 15, CategoryId = 2 },
                 new ProductCategoryEntity { ProductId = 15, CategoryId = 1 },
                 new ProductCategoryEntity { ProductId = 16, CategoryId = 2 },
+                new ProductCategoryEntity { ProductId = 16, CategoryId = 1 },
                 new ProductCategoryEntity { ProductId = 17, CategoryId = 2 },
                 new ProductCategoryEntity { ProductId = 17, CategoryId = 3 },
                 new ProductCategoryEntity { ProductId = 18, CategoryId = 2 },

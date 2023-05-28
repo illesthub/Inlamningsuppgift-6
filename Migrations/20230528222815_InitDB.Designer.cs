@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Inlamningsuppgift_6.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20230526202216_fixed typos")]
-    partial class fixedtypos
+    [Migration("20230528222815_InitDB")]
+    partial class InitDB
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -138,6 +138,11 @@ namespace Inlamningsuppgift_6.Migrations
                         },
                         new
                         {
+                            ProductId = 1,
+                            CategoryId = 3
+                        },
+                        new
+                        {
                             ProductId = 2,
                             CategoryId = 2
                         },
@@ -148,8 +153,18 @@ namespace Inlamningsuppgift_6.Migrations
                         },
                         new
                         {
+                            ProductId = 3,
+                            CategoryId = 3
+                        },
+                        new
+                        {
                             ProductId = 4,
                             CategoryId = 2
+                        },
+                        new
+                        {
+                            ProductId = 4,
+                            CategoryId = 3
                         },
                         new
                         {
@@ -158,8 +173,18 @@ namespace Inlamningsuppgift_6.Migrations
                         },
                         new
                         {
+                            ProductId = 5,
+                            CategoryId = 1
+                        },
+                        new
+                        {
                             ProductId = 6,
                             CategoryId = 2
+                        },
+                        new
+                        {
+                            ProductId = 6,
+                            CategoryId = 1
                         },
                         new
                         {
@@ -170,6 +195,11 @@ namespace Inlamningsuppgift_6.Migrations
                         {
                             ProductId = 8,
                             CategoryId = 2
+                        },
+                        new
+                        {
+                            ProductId = 8,
+                            CategoryId = 1
                         },
                         new
                         {
@@ -193,8 +223,18 @@ namespace Inlamningsuppgift_6.Migrations
                         },
                         new
                         {
+                            ProductId = 12,
+                            CategoryId = 3
+                        },
+                        new
+                        {
                             ProductId = 13,
                             CategoryId = 2
+                        },
+                        new
+                        {
+                            ProductId = 13,
+                            CategoryId = 1
                         },
                         new
                         {
@@ -203,8 +243,18 @@ namespace Inlamningsuppgift_6.Migrations
                         },
                         new
                         {
+                            ProductId = 14,
+                            CategoryId = 3
+                        },
+                        new
+                        {
                             ProductId = 15,
                             CategoryId = 2
+                        },
+                        new
+                        {
+                            ProductId = 15,
+                            CategoryId = 1
                         },
                         new
                         {
@@ -213,8 +263,18 @@ namespace Inlamningsuppgift_6.Migrations
                         },
                         new
                         {
+                            ProductId = 16,
+                            CategoryId = 1
+                        },
+                        new
+                        {
                             ProductId = 17,
                             CategoryId = 2
+                        },
+                        new
+                        {
+                            ProductId = 17,
+                            CategoryId = 3
                         },
                         new
                         {
@@ -223,8 +283,18 @@ namespace Inlamningsuppgift_6.Migrations
                         },
                         new
                         {
+                            ProductId = 18,
+                            CategoryId = 3
+                        },
+                        new
+                        {
                             ProductId = 19,
                             CategoryId = 2
+                        },
+                        new
+                        {
+                            ProductId = 19,
+                            CategoryId = 3
                         });
                 });
 
@@ -240,8 +310,9 @@ namespace Inlamningsuppgift_6.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("Price")
-                        .HasColumnType("money");
+                    b.Property<string>("Price")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -256,133 +327,133 @@ namespace Inlamningsuppgift_6.Migrations
                         {
                             Id = 1,
                             LinkUrl = "/images/placeholders/applewatchseries270x295.jpg",
-                            Price = 30m,
+                            Price = "$30",
                             Title = "Apple watch series"
                         },
                         new
                         {
                             Id = 2,
                             LinkUrl = "/images/placeholders/tablelamp270x295.jpg",
-                            Price = 20m,
+                            Price = "$20",
                             Title = "Table lamp"
                         },
                         new
                         {
                             Id = 3,
                             LinkUrl = "/images/placeholders/laptopthinkpad270x295.jpg",
-                            Price = 120m,
+                            Price = "$120",
                             Title = "Laptop thinkpad lenovo"
                         },
                         new
                         {
                             Id = 4,
                             LinkUrl = "/images/placeholders/fujifilmcamera270x295.jpg",
-                            Price = 200m,
+                            Price = "$200",
                             Title = "Camera Fujifilm"
                         },
                         new
                         {
                             Id = 5,
                             LinkUrl = "/images/placeholders/makeupmirror270x295.jpg",
-                            Price = 15m,
+                            Price = "$15",
                             Title = "Make-up mirror"
                         },
                         new
                         {
                             Id = 6,
                             LinkUrl = "/images/placeholders/memorycardlexar270x295.jpg",
-                            Price = 50m,
+                            Price = "$50",
                             Title = "Memorycard 128GB Lexar"
                         },
                         new
                         {
                             Id = 7,
                             LinkUrl = "/images/placeholders/sunglassesunisex270x295.jpg",
-                            Price = 25m,
+                            Price = "$25",
                             Title = "Sunglasses unisex"
                         },
                         new
                         {
                             Id = 8,
                             LinkUrl = "/images/placeholders/bodylotionaloevera270x295.jpg",
-                            Price = 20m,
+                            Price = "$20",
                             Title = "Bodylotion aloe vera"
                         },
                         new
                         {
                             Id = 9,
                             LinkUrl = "/images/placeholders/soapandbrush270x295.jpg",
-                            Price = 10m,
+                            Price = "$10",
                             Title = "Soap and brush"
                         },
                         new
                         {
                             Id = 10,
                             LinkUrl = "/images/placeholders/kettlebell4kg270x295.jpg",
-                            Price = 30m,
+                            Price = "$30",
                             Title = "Kettlebell 4kg"
                         },
                         new
                         {
                             Id = 11,
                             LinkUrl = "/images/placeholders/dumbbells270x295.jpg",
-                            Price = 45m,
+                            Price = "$45",
                             Title = "Dumbbells 10kg"
                         },
                         new
                         {
                             Id = 12,
                             LinkUrl = "/images/placeholders/whitedress270x295.jpg",
-                            Price = 80m,
+                            Price = "$80",
                             Title = "White dress"
                         },
                         new
                         {
                             Id = 13,
                             LinkUrl = "/images/placeholders/yellowboots270x295.jpg",
-                            Price = 50m,
+                            Price = "$50",
                             Title = "Yellow boots"
                         },
                         new
                         {
                             Id = 14,
                             LinkUrl = "/images/placeholders/leatherbag270x295.jpg",
-                            Price = 65m,
+                            Price = "$65",
                             Title = "Leather bag"
                         },
                         new
                         {
                             Id = 15,
                             LinkUrl = "/images/placeholders/orangeshirt270x295.jpg",
-                            Price = 20m,
+                            Price = "$20",
                             Title = "Orange shirt"
                         },
                         new
                         {
                             Id = 16,
                             LinkUrl = "/images/placeholders/hat270x295.jpg",
-                            Price = 25m,
+                            Price = "$25",
                             Title = "Hat timeless"
                         },
                         new
                         {
                             Id = 17,
                             LinkUrl = "/images/placeholders/sunglasses270x295.jpg",
-                            Price = 60m,
+                            Price = "$60",
                             Title = "Sunglasses retro"
                         },
                         new
                         {
                             Id = 18,
                             LinkUrl = "/images/placeholders/earbuds270x295.jpg",
-                            Price = 120m,
+                            Price = "$120",
                             Title = "Earbuds with red case"
                         },
                         new
                         {
                             Id = 19,
                             LinkUrl = "/images/placeholders/dreheadphones270x295.jpg",
-                            Price = 95m,
+                            Price = "$95",
                             Title = "Headphones by Dre"
                         });
                 });
@@ -480,15 +551,15 @@ namespace Inlamningsuppgift_6.Migrations
                         {
                             Id = "c59eef42-0d80-437c-a387-dfd0685f11e2",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "7486b41c-ec6b-48d1-a3ff-39c583fe6fa7",
+                            ConcurrencyStamp = "6a4a7b30-a849-4c64-a03d-0ad65fb25b28",
                             Email = "admin@bmerketo.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@BMERKETO.COM",
                             NormalizedUserName = "ADMIN@BMERKETO.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEBtmc0FVLM0EVlATG3RPXoSQhS9vefHE+rSmdr4mfumqXWkhQzsJ7Y9mP4k/8FExGQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPDWu2mcHv3vFIPGx33wZJ/lcyKQxzwjCYnIvHHwjbStcd1Ab5u8qxna5xVdmtYAEA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "c95b56b5-22ef-43b0-90fd-fef01d423cc2",
+                            SecurityStamp = "43ecbb39-1db8-4c34-9d3b-a7eb01875121",
                             TwoFactorEnabled = false,
                             UserName = "admin@bmerketo.com"
                         });
@@ -524,14 +595,14 @@ namespace Inlamningsuppgift_6.Migrations
                         new
                         {
                             Id = "c59eef42-0d80-437c-a387-dfd0685f11e2",
-                            ConcurrencyStamp = "9986cf7b-ff36-41d9-a512-abf964740ef2",
+                            ConcurrencyStamp = "d8c88bf8-c099-4b96-8a2e-ccaff2963ce4",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
                             Id = "5e1ad513-cac9-46ef-92e8-fb55b53f7387",
-                            ConcurrencyStamp = "747177d7-1209-42f6-8645-8c27e462b178",
+                            ConcurrencyStamp = "af43a2f7-bbf9-4a91-bd3e-b383ad0550fe",
                             Name = "User",
                             NormalizedName = "USER"
                         });

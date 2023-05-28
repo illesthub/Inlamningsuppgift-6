@@ -4,13 +4,14 @@
 
 .up-to-sell {
     background-color: $color-theme-2;
-    padding: 40px 20px;
+    padding: 60px 20px;
 
     .collection-grid {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-template-areas: "content" "item-1" "item-2";
         gap: 40px;
+        margin-left: 20px;
 
         @include md {
             grid-template-columns: repeat(2, 1fr);
@@ -24,16 +25,16 @@
 
         .item-1 {
             grid-area: item-1;
-            width: 369px;
+            width: 370px;
 
             .collection-item {
                 background-color: $color-white;
                 text-decoration: none;
-                width: 369px;
+                width: 370px;
                 display: block;
 
                 img {
-                    width: 369px;
+                    width: 370px;
                     height: 310px;
                 }
 
@@ -87,6 +88,7 @@
         .discover {
             grid-area: content;
             background-color: $color-white;
+            width: 370px;
 
             .collection-content {
                 height: 100%;
@@ -159,16 +161,16 @@
 
         .item-2 {
             grid-area: item-2;
-            width: 369px;
+            width: 370px;
 
             .collection-item {
                 background-color: $color-white;
                 text-decoration: none;
-                width: 369px;
+                width: 370px;
                 display: block;
 
                 img {
-                    width: 369px;
+                    width: 370px;
                     height: 310px;
                 }
 

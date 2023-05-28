@@ -260,6 +260,11 @@ namespace Inlamningsuppgift_6.Migrations
                         },
                         new
                         {
+                            ProductId = 16,
+                            CategoryId = 1
+                        },
+                        new
+                        {
                             ProductId = 17,
                             CategoryId = 2
                         },
@@ -543,15 +548,15 @@ namespace Inlamningsuppgift_6.Migrations
                         {
                             Id = "c59eef42-0d80-437c-a387-dfd0685f11e2",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "82b73c8d-185f-496a-8318-53731533eff4",
+                            ConcurrencyStamp = "6a4a7b30-a849-4c64-a03d-0ad65fb25b28",
                             Email = "admin@bmerketo.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedEmail = "ADMIN@BMERKETO.COM",
                             NormalizedUserName = "ADMIN@BMERKETO.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEO0xRTe5P4SYekMbKDSkVnAoKXsenpGic40JPmb5PoERIPPxOiQ1GFCcFMPCbq6BRw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPDWu2mcHv3vFIPGx33wZJ/lcyKQxzwjCYnIvHHwjbStcd1Ab5u8qxna5xVdmtYAEA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "b59cf5e4-7908-46c6-9a95-3f653dff060d",
+                            SecurityStamp = "43ecbb39-1db8-4c34-9d3b-a7eb01875121",
                             TwoFactorEnabled = false,
                             UserName = "admin@bmerketo.com"
                         });
@@ -587,14 +592,14 @@ namespace Inlamningsuppgift_6.Migrations
                         new
                         {
                             Id = "c59eef42-0d80-437c-a387-dfd0685f11e2",
-                            ConcurrencyStamp = "a7f7bb57-b1d5-465f-9a3b-27dc754e2ca9",
+                            ConcurrencyStamp = "d8c88bf8-c099-4b96-8a2e-ccaff2963ce4",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
                             Id = "5e1ad513-cac9-46ef-92e8-fb55b53f7387",
-                            ConcurrencyStamp = "6fbd9930-836c-405b-a0a6-c4efa4fe7f85",
+                            ConcurrencyStamp = "af43a2f7-bbf9-4a91-bd3e-b383ad0550fe",
                             Name = "User",
                             NormalizedName = "USER"
                         });

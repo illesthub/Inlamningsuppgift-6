@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Inlamningsuppgift_6.Migrations
 {
     /// <inheritdoc />
-    public partial class InitDatabase : Migration
+    public partial class InitDB : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -107,7 +107,7 @@ namespace Inlamningsuppgift_6.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Price = table.Column<decimal>(type: "money", nullable: false),
+                    Price = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LinkUrl = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
@@ -274,14 +274,14 @@ namespace Inlamningsuppgift_6.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "5e1ad513-cac9-46ef-92e8-fb55b53f7387", "cbc98abd-6868-4c71-b931-b22f18d20543", "User", "USER" },
-                    { "c59eef42-0d80-437c-a387-dfd0685f11e2", "00a7105a-1e78-4d98-9f99-cc712009a246", "Admin", "ADMIN" }
+                    { "5e1ad513-cac9-46ef-92e8-fb55b53f7387", "af43a2f7-bbf9-4a91-bd3e-b383ad0550fe", "User", "USER" },
+                    { "c59eef42-0d80-437c-a387-dfd0685f11e2", "d8c88bf8-c099-4b96-8a2e-ccaff2963ce4", "Admin", "ADMIN" }
                 });
 
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "Company", "ConcurrencyStamp", "Email", "EmailConfirmed", "FirstName", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "c59eef42-0d80-437c-a387-dfd0685f11e2", 0, null, "278c5cce-808f-402f-83d3-a20b1ba59457", "admin@bmerketo.com", false, null, null, false, null, "ADMIN@BMERKETO.COM", "ADMIN@BMERKETO.COM", "AQAAAAIAAYagAAAAEKWv4NGdkxLTrUSMcqtLFlYPeKk4+9cPQ6Rw6G5lSSQ/KnfV5saoS2VZLdDJuGUqlg==", null, false, "769c5b93-d394-4169-af0e-0c56df518488", false, "admin@bmerketo.com" });
+                values: new object[] { "c59eef42-0d80-437c-a387-dfd0685f11e2", 0, null, "6a4a7b30-a849-4c64-a03d-0ad65fb25b28", "admin@bmerketo.com", false, null, null, false, null, "ADMIN@BMERKETO.COM", "ADMIN@BMERKETO.COM", "AQAAAAIAAYagAAAAEPDWu2mcHv3vFIPGx33wZJ/lcyKQxzwjCYnIvHHwjbStcd1Ab5u8qxna5xVdmtYAEA==", null, false, "43ecbb39-1db8-4c34-9d3b-a7eb01875121", false, "admin@bmerketo.com" });
 
             migrationBuilder.InsertData(
                 table: "Categories",
@@ -298,25 +298,25 @@ namespace Inlamningsuppgift_6.Migrations
                 columns: new[] { "Id", "LinkUrl", "Price", "Title" },
                 values: new object[,]
                 {
-                    { 1, "/images/placeholders/applewatchseries270x295.jpg", 30m, "Apple watch series" },
-                    { 2, "/images/placeholders/tablelamp270x295.jpg", 20m, "Table lamp" },
-                    { 3, "/images/placeholders/laptopthinkpad270x295.jpg", 120m, "Laptop thinkpad lenovo" },
-                    { 4, "/images/placeholders/fujufilmcamera270x295.jpg", 200m, "Camera Fujifilm" },
-                    { 5, "/images/placeholders/makeupmirror270x295.jpg", 15m, "Make-up mirror" },
-                    { 6, "/images/placeholders/memorycardlexar.jpg", 50m, "Memorycard 128GB Lexar" },
-                    { 7, "/images/placeholders/sunglassesunisex270x295.jpg", 25m, "Sunglasses unisex" },
-                    { 8, "/images/placeholders/bodylotionaloevera270x295.jpg", 20m, "Bodylotion aloe vera" },
-                    { 9, "/images/placeholders/soapandbrush270x295.jpg", 10m, "Soap and brush" },
-                    { 10, "/images/placeholders/kettlebell4kg270x295.jpg", 30m, "Kettlebell 4kg" },
-                    { 11, "/images/placeholders/dumbbells270x295.jpg", 45m, "Dumbbells 10kg" },
-                    { 12, "/images/placeholders/whitedress270x295.jpg", 80m, "White dress" },
-                    { 13, "/images/placeholders/yellowboots270x295.jpg", 50m, "Yellow boots" },
-                    { 14, "/images/placeholders/leatherbag270x295.jpg", 65m, "Leather bag" },
-                    { 15, "/images/placeholders/orangeshirt270x295.jpg", 20m, "Orange shirt" },
-                    { 16, "/images/placeholders/hat270x295.jpg", 25m, "Hat timeless" },
-                    { 17, "/images/placeholders/sunglasses270x295.jpg", 60m, "Sunglasses retro" },
-                    { 18, "/images/placeholders/earbuds270x295.jpg", 120m, "Earbuds with red case" },
-                    { 19, "/images/placeholders/dreheadphones270x295.jpg", 95m, "Headphones by Dre" }
+                    { 1, "/images/placeholders/applewatchseries270x295.jpg", "$30", "Apple watch series" },
+                    { 2, "/images/placeholders/tablelamp270x295.jpg", "$20", "Table lamp" },
+                    { 3, "/images/placeholders/laptopthinkpad270x295.jpg", "$120", "Laptop thinkpad lenovo" },
+                    { 4, "/images/placeholders/fujifilmcamera270x295.jpg", "$200", "Camera Fujifilm" },
+                    { 5, "/images/placeholders/makeupmirror270x295.jpg", "$15", "Make-up mirror" },
+                    { 6, "/images/placeholders/memorycardlexar270x295.jpg", "$50", "Memorycard 128GB Lexar" },
+                    { 7, "/images/placeholders/sunglassesunisex270x295.jpg", "$25", "Sunglasses unisex" },
+                    { 8, "/images/placeholders/bodylotionaloevera270x295.jpg", "$20", "Bodylotion aloe vera" },
+                    { 9, "/images/placeholders/soapandbrush270x295.jpg", "$10", "Soap and brush" },
+                    { 10, "/images/placeholders/kettlebell4kg270x295.jpg", "$30", "Kettlebell 4kg" },
+                    { 11, "/images/placeholders/dumbbells270x295.jpg", "$45", "Dumbbells 10kg" },
+                    { 12, "/images/placeholders/whitedress270x295.jpg", "$80", "White dress" },
+                    { 13, "/images/placeholders/yellowboots270x295.jpg", "$50", "Yellow boots" },
+                    { 14, "/images/placeholders/leatherbag270x295.jpg", "$65", "Leather bag" },
+                    { 15, "/images/placeholders/orangeshirt270x295.jpg", "$20", "Orange shirt" },
+                    { 16, "/images/placeholders/hat270x295.jpg", "$25", "Hat timeless" },
+                    { 17, "/images/placeholders/sunglasses270x295.jpg", "$60", "Sunglasses retro" },
+                    { 18, "/images/placeholders/earbuds270x295.jpg", "$120", "Earbuds with red case" },
+                    { 19, "/images/placeholders/dreheadphones270x295.jpg", "$95", "Headphones by Dre" }
                 });
 
             migrationBuilder.InsertData(
@@ -330,24 +330,38 @@ namespace Inlamningsuppgift_6.Migrations
                 values: new object[,]
                 {
                     { 2, 1 },
+                    { 3, 1 },
                     { 2, 2 },
                     { 2, 3 },
+                    { 3, 3 },
                     { 2, 4 },
+                    { 3, 4 },
+                    { 1, 5 },
                     { 2, 5 },
+                    { 1, 6 },
                     { 2, 6 },
                     { 2, 7 },
+                    { 1, 8 },
                     { 2, 8 },
                     { 2, 9 },
                     { 2, 10 },
                     { 2, 11 },
                     { 2, 12 },
+                    { 3, 12 },
+                    { 1, 13 },
                     { 2, 13 },
                     { 2, 14 },
+                    { 3, 14 },
+                    { 1, 15 },
                     { 2, 15 },
+                    { 1, 16 },
                     { 2, 16 },
                     { 2, 17 },
+                    { 3, 17 },
                     { 2, 18 },
-                    { 2, 19 }
+                    { 3, 18 },
+                    { 2, 19 },
+                    { 3, 19 }
                 });
 
             migrationBuilder.CreateIndex(
