@@ -1,0 +1,39 @@
+﻿.productdescription {
+
+    .container {
+
+        .content {
+
+            .title {
+                font-size: 24px;
+                font-weight: $font-weight-semibold;
+                font-family: $font-poppins;
+                color: #363636;
+                margin-top: 30px;
+            }
+
+            .infotext {
+                max-width: 700px;
+
+                h2 {
+                    font-size: 16px;
+                    font-family: $font-roboto;
+                    color: #636363;
+                    margin-top: 30px;
+                }
+            }
+
+            .img {
+                float: right;
+                margin-top: 30px;
+                margin-right: 40px;
+            }
+        }
+
+        .line {
+            height: 1px;
+            background: gray;
+            margin-top: 100px;
+        }
+    }
+}

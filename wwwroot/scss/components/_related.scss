@@ -1,0 +1,97 @@
+﻿.related {
+    margin-top: 40px;
+
+    .container {
+
+        .title {
+            font-size: 24px;
+            font-family: $font-poppins;
+            font-weight: $font-weight-semibold;
+            color: #292929;
+        }
+
+        .products {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            gap: 70px;
+
+            .image-1 {
+
+                .images {
+                }
+
+                .productname {
+                    font-size: 18px;
+                    font-weight: $font-weight-medium;
+                    font-family: $font-poppins;
+                    color: #000000;
+                }
+
+                .price {
+                    font-size: 16px;
+                    font-family: $font-poppins;
+                    color: #636363;
+                }
+            }
+
+            .image-2 {
+
+                .images {
+                }
+
+                .productname {
+                    font-size: 18px;
+                    font-weight: $font-weight-medium;
+                    font-family: $font-poppins;
+                    color: #000000;
+                }
+
+                .price {
+                    font-size: 16px;
+                    font-family: $font-poppins;
+                    color: #636363;
+                }
+            }
+
+            .image-3 {
+
+                .images {
+                }
+
+                .productname {
+                    font-size: 18px;
+                    font-weight: $font-weight-medium;
+                    font-family: $font-poppins;
+                    color: #000000;
+                }
+
+                .price {
+                    font-size: 16px;
+                    font-family: $font-poppins;
+                    color: #636363;
+                }
+            }
+
+            .image-4 {
+
+                .images {
+                }
+
+                .productname {
+                    font-size: 18px;
+                    font-weight: $font-weight-medium;
+                    font-family: $font-poppins;
+                    color: #000000;
+                }
+
+                .price {
+                    font-size: 16px;
+                    font-family: $font-poppins;
+                    color: #636363;
+                }
+            }
+        }
+    }
+}

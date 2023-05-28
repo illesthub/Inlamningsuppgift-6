@@ -1,0 +1,11 @@
+﻿@using Inlamningsuppgift_6.Helpers.Repositories;
+@using Inlamningsuppgift_6.Models.Entities;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@inject ProductRepo productRepo;
+@model int;
+
+@{
+    var products = await productRepo.GetAsync();
+    var product = products.FirstOrDefault(x => x.Id == Model);
+}
+<partial name="/Views/Partials/_ProductDetails.cshtml" model="product" />

@@ -1,0 +1,137 @@
+﻿@using Inlamningsuppgift_6.Models.Entities;
+@model ProductEntity;
+
+<div class="banner">
+    <div class="container">
+        <div class="content">
+            <img src="/images/placeholders/1920x300.svg">
+        </div>
+    </div>
+</div>
+
+<section class="productinfo">
+    <div class="container">
+        <div class="images">
+            <img class="large" src="@Model.LinkUrl">
+            <div class="imagesmall">
+                <img class="small" src="@Model.LinkUrl">
+                <img class="small" src="@Model.LinkUrl">
+                <img class="small" src="@Model.LinkUrl">
+                <img class="small" src="@Model.LinkUrl">
+            </div>
+        </div>
+        <div class="information">
+            <p class="title">@Model.Title</p>
+            <p>Lirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam</p>
+            <p>voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita</p>
+            <p>kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="reviews">16 Reviews</i>
+            </div>
+            <h1 class="price">@Model.Price</h1>
+            <div class="quantity">
+                <button class="minus-btn" type="button">-</button>
+                <input type="text" value="0">
+                <button class="plus-btn" type="button">+</button>
+                <button class="add-to-cart-btn" type="button">Add to Cart <i class="fa-regular fa-cart-plus"></i></button>
+            </div>
+            <div class="btn-colors">
+                <button class="red"></button>
+                <button class="yellow"></button>
+                <button class="green"></button>
+                <i>SKU: N/A</i>
+            </div>
+            <button class="addtowish">Add to wishlist</button>
+            <div class="category">Category: Table lamp, Light</div>
+        </div>
+    </div>
+</section>
+
+<div class="buttoninfo">
+    <div class="container">
+        <div class="btns">
+            <button class="description-btn">DESCRIPTION</button>
+            <button class="info-btn">ADDITIONAL INFO</button>
+            <button class="reviews-btn">REVIEWS (0)</button>
+            <button class="shipping-btn">SHIPPING & DELIVERY</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="productdescription">
+    <div class="container">
+        <div class="content">
+            <h1 class="title">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie.</h1>
+            <img class="img" src="/images/placeholders/469x356.svg">
+            <div class="infotext">
+                <h2>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et cusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata santus est Lorem ipsum dolor sit amet. Lorem ipsum dolor.
+                </h2>
+                <h2>
+                    accusantium laborum pretium hic excepturi harum repellat facilisis convallis potenti, adipiscing lectus aliqua. Asperiores repudiandae ipsam error erat, accusamus, cum taciti unde?
+                </h2>
+                <h2>
+                    Praesentium, pariatur, tempora consequuntur purus sapiente, iaculis vitae consequatur, rhoncus earum eleifend, hendrerit ipsum rhoncus ex error, impedit! Alias laboris sequi curae aptent? Eu sagittis eu, distinctio tortor? Dapibus delectus! Consequuntur luctus.
+                </h2>
+                <h2>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et cusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata santus est Lorem ipsum dolor sit amet. Lorem ipsum dolor.
+                </h2>
+            </div>
+            <div class="line"><hr></div>
+        </div>
+    </div>
+</div>
+
+<!-- productdescription tar slut -->
+<!-- related börjar -->
+
+<div class="related">
+    <div class="container">
+        <h1 class="title">Related Products</h1>
+        <div class="products">
+
+            <div class="image-1">
+                <img class="images" src="/images/placeholders/270x295.svg">
+                <h2 class="productname">Gumshoes black fashion</h2>
+                <h2 class="price">$80.00</h2>
+            </div>
+
+            <div class="image-2">
+                <img class="images" src="/images/placeholders/270x295.svg">
+                <h2 class="productname">Woman white dress</h2>
+                <h2 class="price">$30.00</h2>
+            </div>
+
+            <div class="image-3">
+                <img class="images" src="/images/placeholders/270x295.svg">
+                <h2 class="productname">Kettle water boiler</h2>
+                <h2 class="price">$30.00</h2>
+            </div>
+
+            <div class="image-4">
+                <img class="images" src="/images/placeholders/270x295.svg">
+                <h2 class="productname">Congee cooking rice cooker</h2>
+                <h2 class="price">$30.00</h2>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="imagesection">
+    <div class="container">
+        <div class="images">
+            <img src="/images/placeholders/200x122.svg">
+            <img src="/images/placeholders/200x122.svg">
+            <img src="/images/placeholders/200x122.svg">
+            <img src="/images/placeholders/200x122.svg">
+            <img src="/images/placeholders/200x122.svg">
+        </div>
+    </div>
+</div>
