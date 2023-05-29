@@ -1,0 +1,31 @@
+﻿@using Inlamningsuppgift_6.Helpers.Repositories;
+@inject ProductRepo productRepo;
+@{
+    var products = await productRepo.GetAsync();
+    var _allProducts = products.Where(x => x.ProductCategories.Any(x => x.CategoryId == 2));
+    var _productList = _allProducts.OrderByDescending(x => x.Price);
+    var _mostExpensiveProducts = _productList.Take(3);
+}
+
+<div class="inforow">
+    <div class="container">
+        
+        @foreach (var product in _mostExpensiveProducts)
+        {
+            <div class="content">
+                <partial name="_CollectionItem.cshtml" model="product" />
+                <div class="information">
+                    <div class="description">
+                        <p class="text">Best dress for everyone ed totam velit risus viverra</p>
+                        <p class="text">nobis donec recusandae perspiciatis incididuno</p>
+                    </div>
+                    <div class="posted">Posted by admin comments 13</div>
+                    <div class="line">
+                        <hr>
+                    </div>
+                </div>
+            </div>
+
+        }
+    </div>
+</div>
