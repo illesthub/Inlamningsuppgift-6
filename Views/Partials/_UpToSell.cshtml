@@ -5,7 +5,8 @@
 @inject ProductRepo productRepo;
 @{
     var products = await productRepo.GetAsync();
-    var _discountProducts = products.Where(x => x.ProductCategories.Any(x => x.CategoryId == 2)).Take(2);
+    var temp = products.Where(x => x.ProductCategories.Any(x => x.CategoryId == 2)).Take(10);
+    var _discountProducts = temp.TakeLast(2);
     var _firstProduct = _discountProducts.First();
     var _secondProduct = _discountProducts.Last();
 }

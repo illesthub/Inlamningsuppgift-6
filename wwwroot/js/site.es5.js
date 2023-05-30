@@ -1,35 +1,17 @@
 ﻿"use strict";
 
-/*try {
-   const toggleBtn = document.querySelector('data-option="toggle"')
-   toggleBtn.addEventListener('click', function () {
-       const element = document.querySelector(toggleBtn.getAttribute)
+var validateText = function validateText(event) {
+    if (event.terget.value.length >= 2) document.querySelector("[data-valmsg-for= \"" + event.target.id + "\"]").innerHTML = "";else document.querySelector("[data-valmsg-for= \"" + event.target.id + "\"]").innerHTML = "Invalid length";
+};
 
-       if (!element.classList.contains('open-menu')) {
-           element.classList.add('open-menu')
-           toggleBtn.classList.add('btn-outline-dark')
-           toggleBtn.classList.add('btn-outline-white')
-       }
+var validateEmail = function validateEmail(event) {
+    var regEx = /^[^\s@]+@[^\s@]+.[^\s@]+$/;
+    if (regEx.test(event.target.value)) document.querySelector("[data-valmsg-for=\"" + event.target.id + "\"]").innerHTML = "";else document.querySelector("[data-valmsg-for=\"" + event.target.id + "\"]").innerHTML = "invalid email";
+};
 
-       else {
-           element.classList.remove('open-menu')
-           toggleBtn.classList.remove('btn-outline-dark')
-           toggleBtn.classList.remove('btn-outline-white')
-       }
-   })
-} catch { }
-*/
-/*try {
-    const footer = document.querySelector('footer')
+var validatePassword = function validatePassword(event) {
+    var regEx = /^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[!@#$%^&*]]).{8,}$/;
 
-        if (document.body.scrollHeight >= window.innerHeight) {
-            footer.classList.remove('position-fixed-bottom')
-            footer.classList.add('position-static')
-        }
-
-        else {
-            footer.classList.remove('position-static')
-            footer.classList.add('position-fixed-bottom')
-    }
-} catch { }*/
+    if (regEx.test(event.target.value)) document.querySelector("[data-valmsg-for=\"" + event.target.id + "\"]").innerHTML = "";else document.querySelector("[data - valmsg -for= \"" + event.target.id + "\"]").innerHTML = "invalid password";
+};
 

@@ -1,30 +1,36 @@
-﻿<section class="contact-form">
+﻿@model ContactFormViewModel;
+
+<section class="contact-form">
     <div class="container">
         <div class="title">Write something</div>
 
-        <form novalidate>
+        <form asp-action="Index" asp-controller="Contact" method="post" novalidate>
+            <div asp-validation-summary="ModelOnly"></div>
+
             <div class="name form-group">
-                <label for="name">Your Name*</label>
-                <input id="name" type="text" class="invalid" required>
-                <span class="error">Your name is required</span>
+                <label asp-for="Name">Your Name*</label>
+                <input asp-for="Name" type="text" required onkeyup="validateText(event)">
+                <span asp-validation-for="Name"></span>
             </div>
             <div class="email form-group">
-                <label for="email">Your Email*</label>
-                <input id="email" type="text" class="invalid">
-                <span class="error">Your email is required</span>
+                <label asp-for="Email">Your Email*</label>
+                <input asp-for="Email" type="text" required onkeyup="validateText(event)">
+                <span asp-validation-for="Email"></span>
             </div>
             <div class="phoneNumber form-group">
-                <label for="phone">Phone Number (optional)</label>
-                <input id="phone" type="text">
+                <label asp-for="PhoneNumber">Your Phonenumber*</label>
+                <input asp-for="PhoneNumber" type="text" required onkeyup="validateText(event)">
+                <span asp-validation-for="PhoneNumber"></span>
             </div>
             <div class="companyName form-group">
-                <label for="company">Company (optional)</label>
-                <input id="company" type="text">
+                <label asp-for="Company">Your Company(Optional)</label>
+                <input asp-for="Company" type="text" required onkeyup="validateText(event)">
+                <span asp-validation-for="Company"></span>
             </div>
             <div class="message form-group">
-                <label for="message">Message*</label>
-                <textarea id="message" class="invalid"></textarea>
-                <span class="error">Message is required</span>
+                <label asp-for="Message">Your Message*</label>
+                <textarea asp-for="Message" type="text" required onkeyup="validateText(event)"></textarea>
+                <span asp-validation-for="Message"></span>
             </div>
             <div class="terms form-checkbox-group">
                 <label class="custom-checkbox">
@@ -33,7 +39,7 @@
                     <span class="checkmark"></span>
                 </label>
             </div>
-            <button class="btn-theme">Submit</button>
+            <button class="btn-theme" type="submit">Submit</button>
         </form>
     </div>
 </section>

@@ -36,7 +36,8 @@ builder.Services.AddScoped<CategoryRepo>();
 builder.Services.AddTransient<CollectionItemViewModel>();
 builder.Services.AddTransient<ProductEntity>();
 builder.Services.AddTransient<ProductCategoryEntity>();
-
+builder.Services.AddTransient<CategoryEntity>();
+builder.Services.AddTransient<ContactFormViewModel>();
 
 
 

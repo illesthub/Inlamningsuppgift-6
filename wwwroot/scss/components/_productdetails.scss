@@ -177,7 +177,8 @@
         .container {
             .btns {
                 display: flex;
-                gap: 20px;
+                gap: 10px;
+                margin-left: 20px;
 
                 .description-btn {
                     width: 291px;
@@ -189,7 +190,7 @@
 
                     &:hover {
                         background-color: $color-theme-1;
-                        color: white;
+                        color: white !important;
                     }
                 }
 

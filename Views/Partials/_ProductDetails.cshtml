@@ -1,23 +1,7 @@
 ﻿@using Inlamningsuppgift_6.Models.Entities;
 @model ProductEntity;
 
-@{
-    List<string> categories = new List<string>();
-    foreach (var category in Model.ProductCategories.Select(x => x.Category.CategoryName))
-    {
-        categories.Add(category);
-    }
-    var firstCategory = categories.Take(1);
-    var secondCategory = categories.TakeLast(1);
-}
 
-<div class="banner">
-    <div class="container">
-        <div class="content">
-            <img src="/images/placeholders/1920x300.svg">
-        </div>
-    </div>
-</div>
 
 <section class="productdetails">
     <div class="productinfo">
@@ -58,7 +42,7 @@
                     <i>SKU: N/A</i>
                 </div>
                 <button class="addtowish">Add to wishlist</button>
-                <div class="category">Category: @firstCategory, @secondCategory</div>
+                <div class="category">Category: @foreach(var c in Model.ProductCategories) {<span>@c.Category.CategoryName </span>} </div>
             </div>
         </div>
     </div>

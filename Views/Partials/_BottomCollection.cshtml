@@ -3,7 +3,7 @@
 @{
     var products = await productRepo.GetAsync();
     var _allProducts = products.Where(x => x.ProductCategories.Any(x => x.CategoryId == 2));
-    var _productList = _allProducts.OrderByDescending(x => x.Price);
+    var _productList = _allProducts.OrderBy(x => x.Price);
     var _mostExpensiveProducts = _productList.Take(3);
 }
 
