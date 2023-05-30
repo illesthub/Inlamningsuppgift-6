@@ -8,4 +8,6 @@
     var products = await productRepo.GetAsync();
     var product = products.FirstOrDefault(x => x.Id == Model);
 }
-<partial name="/Views/Partials/_ProductDetails.cshtml" model="product" />
+
+<div style="height: 80px;"></div>
+<partial name="/Views/Partials/_ProductDetails.cshtml" model="product"  />
