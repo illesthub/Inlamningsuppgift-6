@@ -1,7 +1,4 @@
-﻿@using Inlamningsuppgift_6.Helpers.Repositories;
-@using Inlamningsuppgift_6.Helpers.Services;
-@using Inlamningsuppgift_6.Models.Entities;
-@inject ProductCategoryEntity _productCategoryEntity;
+﻿@inject ProductCategoryEntity _productCategoryEntity;
 @inject ProductRepo productRepo;
 @{
     var products = await productRepo.GetAsync();

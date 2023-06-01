@@ -2,7 +2,7 @@
 @import '../core/_fonts.scss';
 @import '../core/_mixins.scss';
 
-.login {
+.loginsection {
     height: 810px;
 
     .container {
@@ -13,7 +13,7 @@
         .loginbody {
             margin-top: 150px;
             padding-top: 10px;
-            height: 500px;
+            height: 550px;
             width: 1140px;
             background-color: #FFFFFF;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -63,10 +63,18 @@
                     gap: 100px;
                     margin-top: 20px;
 
+                    span {
+                        color: red;
+                        font-size: 14px;
+                        margin-right: 300px;
+                    }
+
                     i {
                         color: red;
                     }
                 }
+
+
 
                 input {
                     height: 50px;

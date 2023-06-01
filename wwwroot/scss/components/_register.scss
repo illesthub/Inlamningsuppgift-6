@@ -2,7 +2,7 @@
 @import '../core/_fonts.scss';
 @import '../core/_mixins.scss';
 
-.register {
+.registersection {
     height: 1500px;
 
     .container {
@@ -13,7 +13,7 @@
         .registerbody {
             margin-top: 50px;
             padding-top: 10px;
-            height: 1110px;
+            height: 1120px;
             width: 1140px;
             background-color: #FFFFFF;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -34,7 +34,7 @@
                 }
 
                 .line {
-                    width: 50px;
+                    width: 245px;
                     margin-left: 40px;
                 }
 
@@ -44,6 +44,11 @@
                     align-items: center;
                     justify-content: center;
                     gap: 20px;
+                }
+
+                .form-one-row {
+                    width: 93%;
+                    margin-left: 40px;
                 }
 
                 .form-group {
@@ -59,7 +64,14 @@
                     font-weight: bold;
                     margin-bottom: 5px;
                     width: 500px;
+
+                    span {
+                        color: red;
+                        font-size: 14px;
+                        margin-left: 100px;
+                    }
                 }
+
 
                 input {
                     height: 50px;

@@ -1,5 +1,4 @@
-﻿@using Inlamningsuppgift_6.Helpers.Repositories;
-@inject ProductRepo productRepo;
+﻿@inject ProductRepo productRepo;
 @{
     var products = await productRepo.GetAsync();
     var _allProducts = products.Where(x => x.ProductCategories.Any(x => x.CategoryId == 2));

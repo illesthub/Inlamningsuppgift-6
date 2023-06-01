@@ -1,7 +1,10 @@
-﻿<div class="register">
+﻿@model RegisterViewModel
+
+<div class="registersection">
     <div class="container">
         <div class="registerbody">
-            <form class="registerform">
+            <form asp-action="Index" asp-controller="Register" method="post" class="registerform" novalidate>
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <h2 class="title">Please Register Your new Account</h2>
                 <div class="line">
                     <hr>
@@ -9,57 +12,59 @@
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="firstname">First Name:</label>
-                        <input type="text" id="firstname" name="firstname" required>
+                        <label asp-for="FirstName">First Name* <span asp-validation-for="FirstName"></span></label>
+                        <input asp-for="FirstName" onkeyup="validateText(event)" />
                     </div>
                     <div class="form-group">
-                        <label for="lastname">Last Name:</label>
-                        <input type="text" id="lastname" name="lastname" required>
+                        <label asp-for="LastName">Last Name* <span asp-validation-for="LastName"></span></label>
+                        <input asp-for="LastName" onkeyup="validateText(event)" />
+
+                    </div>
+                </div>
+                <div class="form-one-row">
+                    <div class="form-group">
+                        <label asp-for="StreetName">Street Name* <span asp-validation-for="StreetName"></span></label>
+                        <input asp-for="StreetName" onkeyup="validateText(event)" />
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="streetname" style="width: 1040px;">Streetname</label>
-                        <input type="text" id="streetname" name="streetname" required>
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="postalcode">Postal Code</label>
-                        <input type="text" id="postalcode" name="postalcode">
+                        <label asp-for="PostalCode">Postal Code* <span asp-validation-for="PostalCode"></span> </label>
+                        <input asp-for="PostalCode" onkeyup="validateText(event)" />
                     </div>
                     <div class="form-group">
-                        <label for="city">City:</label>
-                        <input type="text" id="city" name="city">
+                        <label asp-for="City">City* <span asp-validation-for="City"></span></label>
+                        <input asp-for="City" onkeyup="validateText(event)" />
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="phone">Phone Number:</label>
-                        <input type="tel" id="phone" name="phone">
+                        <label asp-for="PhoneNumber">Phonenumber*  <span asp-validation-for="PhoneNumber"></span> </label>
+                        <input asp-for="PhoneNumber" onkeyup="validateText(event)" />
                     </div>
                     <div class="form-group">
-                        <label for="company">Company:</label>
-                        <input type="text" id="company" name="company">
-                    </div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="email" style="width: 1040px;">Email</label>
-                        <input type="text" id="email" name="email" required>
+                        <label asp-for="Company">Company (optinal)</label>
+                        <input asp-for="Company" onkeyup="validateText(event)" />
                     </div>
                 </div>
-                <div class="form-row">
+                <div class="form-one-row">
                     <div class="form-group">
-                        <label for="password" style="width: 1040px;">Password</label>
-                        <input type="password" id="password" name="password" required>
+                        <label asp-for="Email">Email* <span asp-validation-for="Email"></span></label>
+                        <input asp-for="Email" onkeyup="validateEmail(event)" />
+
                     </div>
                 </div>
-                <div class="form-row">
+                <div class="form-one-row">
                     <div class="form-group">
-                        <label for="confirmpassword" style="width: 1040px;">Confirm Password</label>
-                        <input type="password" id="confirmpassword" name="confirmpassword" required>
+                        <label asp-for="Password">Password* <span asp-validation-for="Password"></span></label>
+                        <input asp-for="Password" onkeyup="validatePassword(event)" />
+                    </div>
+                </div>
+                <div class="form-one-row">
+                    <div class="form-group">
+                        <label asp-for="ConfirmPassword">Confirm Password* <span asp-validation-for="ConfirmPassword"></span></label>
+                        <input asp-for="ConfirmPassword" onkeyup="validatePassword(event)" />
                     </div>
                 </div>
                 <div class="form-row">

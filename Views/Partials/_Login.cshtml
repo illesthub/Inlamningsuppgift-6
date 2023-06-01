@@ -1,7 +1,10 @@
-﻿<div class="login">
+﻿@model LoginViewModel
+
+<div class="loginsection">
     <div class="container">
         <div class="loginbody">
-            <form class="loginform">
+            <form asp-action="Index" asp-controller="Login" method="post" class="loginform" novalidate>
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <h2 class="title">Please Login to Your Account</h2>
                 <div class="line">
                     <hr>
@@ -9,12 +12,12 @@
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="firstname">First Name:  <a class="link" asp-controller="account" asp-action="register"><i>Don't have an account?</i></a></label>
-                        <input type="text" id="firstname" name="firstname" required>
+                        <label asp-for="Email">Email adress* <span asp-validation-for="Email"></span> <a asp-controller="register" asp-action="index"> <i>Don't have an account yet?</i></a></label>
+                        <input asp-for="Email" onkeyup="validateText(event)" />
                     </div>
                     <div class="form-group">
-                        <label for="password">Password <i>Forgot your password?</i></label>
-                        <input type="password" id="password" name="password" required>
+                        <label asp-for="Password">Password* <span asp-validation-for="Password"></span> <i>Forgot your password?</i></label>
+                        <input asp-for="Password" onkeyup="validatePassword(event)" />
                     </div>
 
                     <div class="infobox">
